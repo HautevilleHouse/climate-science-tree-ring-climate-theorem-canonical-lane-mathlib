@@ -1,0 +1,18 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.ClimateScienceTreeRingClimateTheoremCanonicalLaneLean.TreeRingProxyPackage
+import HautevilleHouse.ClimateScienceTreeRingClimateTheoremCanonicalLaneLean.IsotopicPaleothermometry
+import HautevilleHouse.ClimateScienceTreeRingClimateTheoremCanonicalLaneLean.MilankovitchForcing
+import HautevilleHouse.ClimateScienceTreeRingClimateTheoremCanonicalLaneLean.DansgaardOeschgerEvent
+import HautevilleHouse.ClimateScienceTreeRingClimateTheoremCanonicalLaneLean.EnergyBalanceModel
+
+namespace HautevilleHouse
+namespace ClimateScienceTreeRingClimateTheoremCanonicalLaneLean
+
+def ConstrainedTreeRingClimateClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_tree_ring_climate_endgame (A : AdmissibleClass) : ConstrainedTreeRingClimateClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end ClimateScienceTreeRingClimateTheoremCanonicalLaneLean
+end HautevilleHouse
